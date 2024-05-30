@@ -1,0 +1,1524 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="img/icon/favicon.png" type="image/png">
+    <title>JOSHCRISPR</title>
+
+    <!-- Slider  -->
+    <link rel='stylesheet' href='//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.css'>
+    <link rel='stylesheet' href='//cdn.jsdelivr.net/jquery.slick/1.5.0/slick-theme.css'>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <!-- Aos  animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- animate css -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <!-- Javascript  -->
+    <script src="js/header.js"></script>
+
+    <style>
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f0f0f0;
+            /* Background color of preloader */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            /* Ensure the loader is above all other content */
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+            /* Smooth transition for fade-out */
+        }
+
+        #preloader.load {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /* Loader styling */
+        .loader {
+            display: flex;
+            justify-content: space-between;
+            width: 80px;
+        }
+
+        /* Dot styling */
+        .dot {
+            width: 20px;
+            height: 20px;
+            background-color: #3498db;
+            border-radius: 50%;
+            animation: bounce 1.5s infinite;
+        }
+
+        /* Delay each dot's animation */
+        .dot:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .dot:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .dot:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        /* Keyframes for bounce animation */
+        @keyframes bounce {
+
+            0%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-30px);
+            }
+        }
+    </style>
+
+</head>
+<script>
+</script>
+
+<body>
+    <div id="preloader">
+        <div class="loader">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+    <!-- Include your script here if necessary -->
+    <script>
+        var load = document.getElementById("preloader");
+        window.onload = function () {
+            if (isFullyLoaded()) {
+                setTimeout(function () {
+                    load.classList.add('load');
+                }, 1500);
+            }
+        };
+        function isFullyLoaded() {
+            return true;
+        }
+    </script>
+    <!--================Header Menu Area =================-->
+    <header class="header_sticky">
+        <div class="aniketrod">
+            <section id="header" class="header">
+                <div class="header-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <ul class="flat-support">
+                                    <li>
+                                        <a href="contact.html" title="">Support</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html" title="">Store Locator</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <ul class="flat-infomation">
+                                    <li class="phone">
+                                        Call Us: <a href="tel:+9048150212" title="">9048150212</a>
+                                        <a href="tel:+7012898332">7012898332</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.container -->
+                </div><!-- /.header-top -->
+                <div class="header-middle">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div id="logo" class="logo">
+                                    <a href="index.html" title="">
+                                        <img src="./img/logo.png" height="50px" width="200px" alt="">
+                                    </a>
+                                </div><!-- /#logo -->
+                            </div><!-- /.col-md-3 -->
+                            <div class="col-md-6 mb-3 col-md-0">
+                                <div class="top-search">
+                                    <form action="#" method="get" class="form-search" accept-charset="utf-8">
+                                        <div class="cat-wrap">
+                                            <div class="all-categories"><!-- /.cat-list-search -->
+                                                <div class="cat-list-search">
+                                                    <!-- <div class="title"> 
+                                                    </div> -->
+                                                </div><!-- /.cat-list-search -->
+                                                <div class="cat-list-search">
+                                                </div><!-- /.cat-list-search -->
+                                            </div><!-- /.all-categories -->
+                                        </div><!-- /.cat-wrap -->
+                                        <div class="box-search">
+                                            <input type="text" name="search" id="search"
+                                                placeholder="Search what you looking for ?">
+                                            <span class="btn-search">
+                                                <button type="submit" class="waves-effect"><i
+                                                        class="fa fa-search"></i></button>
+                                            </span>
+                                        </div><!-- /.box-search -->
+                                    </form><!-- /.form-search -->
+                                </div><!-- /.top-search -->
+                            </div><!-- /.col-md-6 -->
+                            <!-- /.col-md-3 -->
+                        </div><!-- /.row -->
+                    </div><!-- /.container -->
+                </div><!-- /.header-middle -->
+                <div class="header-bottom">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 col-2">
+                                <div id="mega-menu">
+                                    <div class="btn-mega"><span></span>
+                                        ALL CATEGORIES
+                                    </div>
+                                    <ul class="menu">
+                                        <li>
+                                            <a href="products.html" title="" class="dropdown">
+                                                <span class="menu-img">
+                                                    <img src="#" alt="">
+                                                </span>
+                                                <span class="menu-title">
+                                                    Diagnostics
+                                                </span>
+                                            </a>
+                                            <div class="drop-menu">
+                                                <div class="one-third">
+                                                    <div class="cat-title">
+                                                        Diagnostics tools
+                                                    </div>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="products.html" title="">
+                                                                Discover a range of diagnostic
+                                                                tools,
+                                                            </a>
+                                                        </li>
+    
+                                                        <li>
+                                                            <a href="" title="">
+                                                                thermometers,</a>
+                                                        </li>
+    
+                                                        <li>
+                                                            <a href="#" title=""> blood pressure monitors,</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" title="">
+                                                                stethoscopes
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="show">
+                                                        <a href="products.html" title="">Shop All</a>
+                                                    </div>
+                                                </div>
+                                                <div class="one-third container">
+                                                    <!-- <div class="cat-title">
+                                                        diagnostic tools,
+                                                    </div> -->
+                                                    <ul class="banner">
+                                                        <li>
+                                                            <div class="banner-text">
+                                                                <div class="banner-title">
+                                                                    Thermometers
+                                                                </div>
+                                                                <div class="more-link">
+                                                                    <a href="#" title="">Shop Now <img src="#" alt=""></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="banner-img">
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="banner-text">
+                                                                <div class="banner-title">
+                                                                    Blood pressure monitors
+                                                                </div>
+                                                                <div class="more-link">
+                                                                    <a href="#" title="">Shop Now <img src="#" alt=""></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="banner-img">
+                                                                <img src="#" alt="">
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="banner-text">
+                                                                <div class="banner-title">
+                                                                    stethoscopes
+                                                                </div>
+                                                                <div class="more-link">
+                                                                    <a href="#" title="">Shop Now <img src="#" alt=""></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="banner-img">
+                                                                <img src="#" alt="">
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="show">
+                                                        <a href="products.html" title="">Shop All</a>
+                                                    </div>
+                                                </div>
+    
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="products.html" title="" class="dropdown">
+                                                <span class="menu-img">
+                                                </span>
+                                                <span class="menu-title">
+                                                    Surgical Instruments
+                                                </span>
+                                            </a>
+                                            <div class="drop-menu">
+                                                <div class="one-third">
+                                                    <div class="cat-title">
+                                                        Surgical Instruments
+                                                    </div>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="#" title="">
+                                                                From scalpels and forceps to
+                                                                surgical scissors,
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" title="">
+                                                                Knife Handles
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" title="">
+                                                                Blade</a>
+                                                        </li>
+    
+                                                        <li>
+                                                            <a href="#" title=""> Elevators</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" title="">
+                                                                <!-- stethoscopes -->
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="show">
+                                                        <a href="products.html" title="">Shop All</a>
+                                                    </div>
+                                                </div>
+                                                <div class="one-third container">
+                                                    <!-- <div class="cat-title">
+                                                        diagnostic tools,
+                                                    </div> -->
+                                                    <ul class="banner">
+                                                        <li>
+                                                            <div class="banner-text">
+                                                                <div class="banner-title">
+                                                                    Knife Handles
+                                                                </div>
+                                                                <div class="more-link">
+                                                                    <a href="#" title="">Shop Now <img src="#" alt=""></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="banner-img">
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="banner-text">
+                                                                <div class="banner-title">
+                                                                    Elevators
+                                                                </div>
+                                                                <div class="more-link">
+                                                                    <a href="#" title="">Shop Now <img src="#" alt=""></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="banner-img">
+                                                                <img src="#" alt="">
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="banner-text">
+                                                                <div class="banner-title">
+                                                                    Elevators
+                                                                </div>
+                                                                <div class="more-link">
+                                                                    <a href="products.html" title="">Shop Now <img src="#"
+                                                                            alt=""></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="banner-img">
+                                                                <img src="#" alt="">
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="show">
+                                                        <a href="products.html" title="">Shop All</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="products.html" title="" class="dropdown">
+                                                <span class="menu-img">
+                                                    <img src="#" alt="">
+                                                </span>
+                                                <span class="menu-title">
+                                                    Imaging Equipment
+                                                </span>
+                                            </a>
+                                            <div class="drop-menu">
+                                                <div class="one-third">
+                                                    <div class="cat-title">
+                                                        Imaging Equipments
+                                                    </div>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="#" title="">
+                                                                X-ray machines
+                                                            </a>
+                                                        </li>
+                                                        <!-- <li>
+                                                            <a href="#" title="">
+                                                                Laptops, Desktops & Monitors
+                                                            </a>
+                                                        </li> -->
+                                                        <li>
+                                                            <a href="#" title="">
+                                                                CT scanners
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" title=""> PET scanners</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" title="">
+                                                                MRI machines
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="show">
+                                                        <a href="products.html" title="">Shop All</a>
+                                                    </div>
+                                                </div>
+                                                <div class="one-third container">
+                                                    <!-- <div class="cat-title">
+                                                        diagnostic tools,
+                                                    </div> -->
+                                                    <ul class="banner">
+                                                        <li>
+                                                            <div class="banner-text">
+                                                                <div class="banner-title">
+                                                                    X-ray machines
+                                                                </div>
+                                                                <div class="more-link">
+                                                                    <a href="#" title="">Shop Now <img src="#" alt=""></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="banner-img">
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="banner-text">
+                                                                <div class="banner-title">
+                                                                    MRI machines
+                                                                </div>
+                                                                <div class="more-link">
+                                                                    <a href="products.html" title="">Shop Now <img src="#"
+                                                                            alt=""></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="banner-img">
+                                                                <img src="#" alt="">
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="banner-text">
+                                                                <div class="banner-title">
+                                                                    PET scanners
+                                                                </div>
+                                                                <div class="more-link">
+                                                                    <a href="#" title="">Shop Now <img src="#" alt=""></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="banner-img">
+                                                                <img src="#" alt="">
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="show">
+                                                        <a href="products.html" title="">Shop All</a>
+                                                    </div>
+                                                </div>
+    
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-9 col-10">
+                                <div class="nav-wrap">
+                                    <div id="mainnav" class="mainnav">
+                                        <ul class="menu">
+                                            <li class="">
+                                                <a href="index.html" title="">Home</a>
+                                            </li>
+                                            <li class="">
+                                                <a href="about-us.html" title="">About</a>
+                                            </li>
+                                            <!-- <li class="">
+                                                <a href="#" title="">Category</a>
+                                            </li> -->
+                                            <li class="has-mega-menu">
+                                                <a href="products.html" title="">Products</a>
+                                                <div class="submenu">
+                                                    <div class="row">
+                                                        <div class="col-lg-3 col-md-12">
+                                                            <h3 class="cat-title"> Diagnostics
+                                                            </h3>
+                                                            <ul class="submenu-child">
+                                                                <li>
+                                                                    <a href="" title=""> Discover a range of diagnostic
+                                                                        tools</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="" title="">Thermometers</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" title="">
+                                                                        Blood
+                                                                        pressure monitors</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" title="">Stethoscopes</a>
+                                                                </li>
+    
+                                                            </ul>
+                                                            <div class="show">
+                                                                <a href="products.html" title="">Shop All</a>
+                                                            </div>
+                                                        </div><!-- /.col-lg-3 col-md-12 -->
+                                                        <div class="col-lg-3 col-md-12">
+                                                            <h3 class="cat-title">Surgical Instruments</h3>
+                                                            <ul class="submenu-child">
+                                                                <li>
+                                                                    <a href="#" title=""> scalpels and forceps to
+                                                                        surgical scissors</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" title="">surgical instruments</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" title="">Elevators</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" title="">Blade</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" title="">Knife Handles</a>
+                                                                </li>
+    
+                                                            </ul>
+                                                            <div class="show">
+                                                                <a href="products.html" title="">Shop All</a>
+                                                            </div>
+                                                        </div><!-- /.col-lg-3 col-md-12 -->
+                                                        <div class="col-lg-4 col-md-12">
+                                                            <h3 class="cat-title">Medical Kits</h3>
+                                                            <ul class="submenu-child">
+                                                                <li>
+                                                                    <a href="#" title="">P.P.E Kits</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" title="">Ortho Kits</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" title="">Angio Kits</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" title="">Surgical Procedure Packs</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" title="">Colonoscopy Kits</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" title="">Caesarean Kits</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" title="">Delivery Kits</a>
+                                                                </li>
+                                                            </ul>
+                                                            <div class="show">
+                                                                <a href="products.html" title="">Shop All</a>
+                                                            </div>
+                                                        </div><!-- /.col-lg-4 col-md-12 -->
+                                                        <div class="col-lg-2 col-md-12">
+                                                            <h3 class="cat-title">Other</h3>
+                                                            <ul class="submenu-child">
+                                                                <li>
+                                                                    <a href="#" title="">Drapes</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" title="">Surgical gowns</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" title="">Patients Gowns</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" title="">Isolation Gowns</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" title=""> Face Masks</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" title="">Bouffant caps</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" title="">OTTable Sheet</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" title="">Abdominal Pads</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" title="">Surgical Razor</a>
+                                                                </li>
+                                                            </ul>
+                                                            <div class="show">
+                                                                <a href="products.html" title="">Shop All</a>
+                                                            </div>
+                                                        </div><!-- /.col-lg-2 col-md-12 -->
+                                                    </div><!-- /.row -->
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="banner-box">
+                                                                <div class="inner-box">
+                                                                    <a href="#" title="">
+                                                                        <img src="#" alt="">
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="banner-box">
+                                                                <div class="inner-box">
+                                                                    <a href="#" title="">
+                                                                        <img src="#" alt="">
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- /.row -->
+                                                </div><!-- /.submenu -->
+                                            </li>
+                                            <li class="">
+                                                <a href="contact.html" title="">Contact</a>
+                                            </li>
+                                        </ul><!-- /.menu -->
+                                    </div><!-- /.mainnav -->
+                                </div><!-- /.nav-wrap -->
+                                <!-- /.today-deal -->
+                                <div class="btn-menu" id="scrollButton">
+                                    <span></span>
+                                </div><!-- //mobile menu button -->
+                                <div class="today-deal">
+                                    <a href="products.html" title="" class="invisible">sss</a>
+                                </div>
+                            </div><!-- /.col-md-9 -->
+                        </div><!-- /.row -->
+                    </div><!-- /.container -->
+                </div>
+                <!-- /.header-bottom -->
+            </section><!-- /#header -->
+    
+            <!-- <section style="min-height: 100vh">
+                </section> -->
+        </div><!-- /.aniketrod -->
+        <script>
+            document.getElementById('scrollButton').addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }); 
+        </script>
+    </header>
+    <!--================Header Menu Area =================-->
+    <!--================Home Banner Area =================-->
+    <section class="home-area-sec">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-9 p-0  ">
+
+                    <div class="left-side">
+                        <!-- <img src="img/banner/front-banner.png" class="bg-showdow" alt=""> -->
+                        <div class="row">
+                            <div class="col-md-8  px-5 pt-0 pt-md-4 pb-3 ">
+                                <div class="right-content">
+                                    <h5>
+                                        JOSHCRISPR
+                                        Health Care and Innovations
+                                    </h5>
+                                    <p>
+                                        We offer a comprehensive range of medical <br /> supplies for all your surgical
+                                        needs.
+                                    </p>
+                                    <a href="products.php">
+                                        <button>SHOP NOW</button>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- <div class="col-md-4 animate__animated animate__slideInRight">
+                                <div class="main-product text-center">
+                                    <img src="img/products/moppingpad.png" alt="">
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 m-0 right-side-slide p-0  mt-3  me-5">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="products.php">
+                                    <div class="right-side text-center  bg-dark w-100 me-2 p-5 ">
+                                        <h2 class="mb-3">Sugeon Gown</h2>
+                                        <p class="mb-4 ">
+                                            SSMMS FABRIC
+                                        </p>
+                                        <img src="img/products/SURGEONGOWN.png" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="products.php">
+                                    <div class="right-side text-center  bg-dark w-100 me-2 p-5 ">
+                                        <h2 class="mb-3">Isolation Grown</h2>
+                                        <p class="mb-4 ">
+                                            WAIST BELT
+                                        </p>
+                                        <img src="img/products/isolation_grown.png" alt="">
+                                    </div>
+                                </a>
+
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="products.php">
+                                    <div class="right-side text-center  bg-dark w-100 me-2 p-5 ">
+                                        <h2 class="mb-3">Thermometers</h2>
+                                        <p class="mb-4 ">
+                                            Digital Sx-1R
+                                        </p>
+                                        <img src="img/products/meter.png" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                    <script>
+                        const swiper = new Swiper('.swiper', {
+                            pagination: {
+                                el: '.swiper-pagination',
+                            },
+                            navigation: {
+                                nextEl: '.swiper-button-next',
+                                prevEl: '.swiper-button-prev',
+                            },
+                            scrollbar: {
+                                el: '.swiper-scrollbar',
+                            },
+                            autoplay: {
+                                delay: 3000, // Delay between slides in milliseconds (3000ms = 3 seconds)
+                                disableOnInteraction: false, // Autoplay will not be disabled after user interactions
+                            },
+                        });
+                    </script>
+                    <!-- <a href="products.php">
+                        <div class="right-side text-center  bg-dark w-100 me-2 p-5 ">
+                            <h2 class="mb-3">Thermometers</h2>
+                            <p class="mb-4 ">
+                                Digital Sx-1R
+                            </p>
+                            <img src="img/products/meter.png" alt="">
+                        </div>
+                    </a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- _------------popular categorys -->
+    <!-- <div class="container mt-5  category">
+        <h2 class="my-4">Featured Categorys</h2>
+        <div class="row category-slider">
+            <div class="col-4 col-md-2 slider">
+                <a href="">
+                    <div class="category-box ">
+                        <img src="img/categorys/diagnostics.png" alt="" class="text-light">
+                        <h5 class="text-center text-black pt-3">Diagnostics</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="col-4 col-md-2 slider">
+                <a href="">
+                    <div class="category-box ">
+                        <img src="img/categorys/surgical-instrument.png" alt="" class="text-light">
+                        <h5 class="text-center text-black pt-3">surgical-instrument</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="col-4 col-md-2 slider">
+                <a href="">
+                    <div class="category-box ">
+                        <img src="img/categorys/imaging-equipment.png" alt="" class="text-light">
+                        <h5 class="text-center text-black pt-3">Imaging-Equipment</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="col-4 col-md-2 slider">
+                <a href="">
+                    <div class="category-box ">
+                        <img src="img/categorys/diagnostics.png" alt="" class="text-light">
+                        <h5 class="text-center text-black pt-3">Diagnostics</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="col-4 col-md-2 slider">
+                <a href="">
+                    <div class="category-box ">
+                        <img src="img/categorys/diagnostics.png" alt="" class="text-light">
+                        <h5 class="text-center text-black pt-3">Diagnostics</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="col-4 col-md-2 slider">
+                <a href="">
+                    <div class="category-box ">
+                        <img src="img/categorys/diagnostics.png" alt="" class="text-light">
+                        <h5 class="text-center text-black pt-3">Diagnostics</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="col-4 col-md-2 slider">
+                <a href="">
+                    <div class="category-box ">
+                        <img src="img/categorys/diagnostics.png" alt="" class="text-light">
+                        <h5 class="text-center text-black pt-3">Diagnostics</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="col-4 col-md-2 slider">
+                <a href="">
+                    <div class="category-box ">
+                        <img src="img/categorys/diagnostics.png" alt="" class="text-light">
+                        <h5 class="text-center text-black pt-3">Diagnostics</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="col-4 col-md-2 slider">
+                <a href="">
+                    <div class="category-box ">
+                        <img src="img/categorys/diagnostics.png" alt="" class="text-light">
+                        <h5 class="text-center text-black pt-3">Diagnostics</h5>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- _------------popular categorys -->
+
+    <!--================ PRODUCTS SECTIONS  =================-->
+    <!--slide  -->
+
+    <div class="card-slider-section my-4">
+        <main>
+            <div class="text">
+                <h1>Our Products</h1>
+                <p>
+                    We Are Manufacturing A Wide Rangeof Products Like:P.P.EKits,Ortho Kits,Angio Kits,General Surgery
+                    Kits,Delivery Kits
+                    Caesarean Kits, Endoscopy Kits,Colonoscopy Kits,Surgical Procedure Packs,Drapes,Surgical
+                    gowns,Patients Gowns,Isolation Gowns
+                    Face Masks,Bouffant caps and,OTTable Sheet,Abdominal Pads,Surgical Razor,Etc..
+                </p>
+            </div>
+            <header>
+                <h1> Products</h1>
+                <div>
+                    <a href="products.php">See all Products</a>
+                </div>
+            </header>
+
+        </main>
+        <section>
+            <div class="container-fluid">
+                <div class="row product-slider  d-flex  justify-content-center ">
+                    <div class=" col-md-4 slide p-0 p-md  d-flex  justify-content-center">
+                        <figure class="snip1423" style="cursor: pointer;"
+                            onclick="window.location.href='products-detail-page.php'">
+                            <div class="img-div text-center">
+                                <img src="./img/products/SURGEONGOWN.png    " alt="sample57" />
+                            </div>
+                            <figcaption>
+                                <h4>SURGEON GOWN </h4>
+                                <ul>
+                                    <li>
+                                        SSMMS FABRIC, BREATHABLE FABRIC,
+                                        KNITTED CUFF
+                                    </li>
+                                </ul>
+                                <div class="buy-btn">
+                                    <a href="products-detail-page.php" class="text-light ">
+                                        SHOP NOW</a>
+
+                                </div>
+                            </figcaption>
+
+
+                        </figure>
+                    </div>
+                    <div class=" col-md-4 slide p-0 p-md  d-flex  justify-content-center">
+                        <figure class="snip1423" style="cursor: pointer;"
+                            onclick="window.location.href='products-detail-page.php'">
+                            <div class="img-div text-center">
+                                <img src="./img/products/moppingpad.png " alt="sample57" />
+                            </div>
+                            <figcaption>
+                                <h4>moppingpad</h4>
+                                <ul>
+                                    <li>
+                                        FABRI USING HIGH QUALITY
+                                        MATERIAL WITH STITCHED BORDER
+                                        USED IN DRESSING WOUNDS FOR
+                                        HANDLING HEAVY DRAINAGE
+                                        AVAILABLE IN BOTH 8 PLY AND 12 PL
+                                    </li>
+                                </ul>
+                                <div class="buy-btn">
+                                    <a href="products-detail-page.php" class="text-light ">
+                                        SHOP NOW</a>
+
+                                </div>
+                            </figcaption>
+                            <!-- <i class="ion-android-cart"></i>
+                            <a href="#domo"></a> -->
+
+                        </figure>
+                    </div>
+                    <div class=" col-md-4 slide p-0 p-md align-items-stretch d-flex  justify-content-center">
+                        <figure class="snip1423" style="cursor: pointer;"
+                            onclick="window.location.href='products-detail-page.php'">
+                            <div class="img-div text-center">
+                                <img src="./img/products/isolation_grown.png" alt="isolation_grown" />
+                            </div>
+                            <figcaption>
+                                <h4>ISOLATION GOWN</h4>
+                                <ul>
+                                    <li>
+                                        WAIST BELT
+                                        SMS / SPUNBOND
+                                        MATERIAL
+                                    </li>
+                                </ul>
+                                <div class="buy-btn">
+                                    <a href="products-detail-page.php" class="text-light ">
+                                        SHOP NOW</a>
+
+                                </div>
+                            </figcaption>
+                            <!-- <i class="ion-android-cart"></i>
+                            <a href="#domo"></a> -->
+
+                        </figure>
+                    </div>
+                    <div class="col-md-4 slide p-0 p-md align-items-stretch  d-flex  justify-content-center">
+                        <figure class="snip1423" style="cursor: pointer;"
+                            onclick="window.location.href='products-detail-page.php'">
+                            <div class="img-div text-center">
+                                <img src="./img/products/ot-table-sheet.png" alt="sample57" />
+                            </div>
+                            <figcaption>
+                                <h4>moppingpad</h4>
+                                <ul>
+                                    <li>
+                                        SMS / SPUNBOND MATERIAL
+                                        •NON - TRANSPARENT
+                                        •SKIN FRIENDLY AND ASSURE
+                                        •UTTERMOST COMFORT
+                                        •LIGHTWEIGHT AND
+                                        HIGHLY FLEXIBLE
+                                    </li>
+                                </ul>
+                                <div class="buy-btn">
+                                    <a href="products-detail-page.php" class="text-light ">
+                                        SHOP NOW</a>
+
+                                </div>
+                            </figcaption>
+                            <!-- <i class="ion-android-cart"></i>
+                            <a href="#domo"></a> -->
+
+                        </figure>
+                    </div>
+                    <div class=" col-md-4 slide p-0 p-md   d-flex  justify-content-center">
+                        <figure class="snip1423" style="cursor: pointer;"
+                            onclick="window.location.href='products-detail-page.php'">
+                            <div class="img-div text-center">
+                                <img src="./img/products/patient.png" alt="sample57" />
+                            </div>
+                            <figcaption>
+                                <h4>PATIENT GOWN</h4>
+                                <ul>
+                                    <li>
+                                        SMS / SPUNBOND MATERIAL
+                                        NON - TRANSPARENT
+                                        SKIN FRIENDLY AND ASSURE
+                                        UTTERMOST COMFORT
+                                        LIGHTWEIGHT AND
+                                        HIGHLY FLEXIBLE
+                                    </li>
+                                </ul>
+                                <div class="buy-btn">
+                                    <a href="products-detail-page.php" class="text-light ">
+                                        SHOP NOW</a>
+
+                                </div>
+                            </figcaption>
+                            <!-- <i class="ion-android-cart"></i>
+                            <a href="#domo"></a> -->
+
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- =============== Card slider  End================== -->
+    <!--================ Feature section start =================-->
+    <section class="feature-section mb-5">
+        <div class="container">
+            <h2 class="pb-4 text-dark ">
+                Innovative Medical Products
+            </h2>
+            <div class="row">
+                <div class="col-md-4 pb-3">
+                    <div class="card card-feature text-center text-lg-left">
+                        <img src="img/blog/tracker.png" height="200px" alt="">
+
+                        <h3 class="card-feature__title mt-2"><span class="card-feature__icon">
+                                <i class="ti-layers"></i>
+                            </span> Wearable Health Tracker</h3>
+                        <p class="card-feature__subtitle">
+                            Monitor your health and fitness goals with our state-of-the-art wearable health tracker Get
+                            fit. Stay fit.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-feature text-center text-lg-left">
+                        <img src="img/blog/telemedicine.png" alt="">
+                        <h3 class="card-feature__title mt-2"><span class="card-feature__icon">
+                                <i class="ti-heart-broken"></i>
+                            </span> Telemedicine Solutions
+                        </h3>
+                        <p class="card-feature__subtitle">
+                            Connect with healthcare
+                            professionals remotely through
+                            our secure and user-friendly
+                            telemedicine platform.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-feature text-center text-lg-left">
+                        <img src="img/blog/inovations.png" alt="">
+                        <h3 class="card-feature__title mt-2"><span class="card-feature__icon">
+                                <i class="ti-headphone-alt"></i>
+                            </span> Smart Pill Dispenser
+                        </h3>
+                        <p class="card-feature__subtitle">
+                            Never miss a medication
+                            dosage with our smart pill
+                            dispenser that sends
+                            reminders to your smartphone.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================ Feature section end =================-->
+
+    <!--================About  Area =================-->
+    <section class="about-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-10 offset-md-1 col-lg-6 offset-lg-6 offset-xl-7 col-xl-5">
+                    <div class="about-content">
+                        <h4>JOSHCRISPR Health Care <br>
+                            and Innovations
+                        </h4>
+                        <h6>Innovative Medical Products,Customer-Centric Approach,Exclusive Discounts,Support and
+                            Warranty
+                        </h6>
+                        <p>
+                            Welcome to JOSHCRISPR Deals, your one-stop shop for all your medical
+                            equipment needs. With a focus on innovation and advancements in
+                            healthcare, we are dedicated to providing high-quality products that
+                            meet the needs of medical professionals across various specialties. Our
+                            wide range of offerings includes diagnostic tools, surgical instruments,
+                            and much more.
+                        </p>
+
+                        <a class="link_one" href="about-us.php">learn more</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================About Area End =================-->
+
+    <!--================ ANSWERS TO COMMON QUERIES =================-->
+
+    <div class="asked-questions-section">
+        <h1 class=" text-center pb-4">Frequently Asked Questions</h1>
+        <div class="container">
+
+            <!-- Accordion -->
+            <div id="accordion" role="tablist">
+                <div class=" card m-1">
+                    <div class="card-header " role="tab">
+                        <h5 class="mb-0">
+                            <a data-toggle="collapse" href="#section-1" class="text-decoration-none">
+                                How can I place an order?
+                            </a>
+                        </h5>
+                    </div>
+                    <div class="collapse " id="section-1" data-parent="#accordion">
+                        <div class="card-body answer-box">
+                            <p>Placing an order is easy!
+                                Simply browse our website,
+                                add items to your cart, and
+                                proceed to checkout.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card m-1">
+                    <div class="card-header" role="tab">
+                        <h5 class="mb-0">
+                            <a data-toggle="collapse" href="#section-2" class="text-decoration-none">
+                                What are your shipping options?
+                            </a>
+                        </h5>
+                    </div>
+                    <div class="collapse " id="section-2" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>
+                                We offer various shipping
+                                options, including standard
+                                and expedited delivery. The
+                                shipping cost and estimated
+                                delivery time will be provided
+                                during the checkout process.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card m-1 ">
+                    <div class="card-header" role="tab">
+                        <h5 class="mb-0">
+                            <a data-toggle="collapse" class="text-decoration-none" href="#section-3">
+                                Do you offer a
+                                warranty on your
+                                products?
+                            </a>
+                        </h5>
+                    </div>
+                    <div class="collapse " id="section-3" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>
+                                Yes, we offer a warranty on
+                                most of our products. The
+                                warranty period may vary
+                                depending on the specific
+                                item. Please refer to the
+                                product description for
+                                warranty details
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!--================  ANSWERS TO COMMON QUERIES =================-->
+
+    <!-- ================ testimonial section start ================= -->
+
+    <section class="testimonial text-center mt-2">
+        <div class="container">
+            <div class="heading white-heading">
+                Customer Reviews
+            </div>
+            <div id="testimonial4"
+                class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x"
+                data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="testimonial4_slide">
+                            <!-- <img src="img/profiles/blankdp.png" width="100%" class="img-circle img-responsive" /> -->
+                            <p>
+                                "I've been purchasing
+                                medical equipment from
+                                JOSHCRISPR Deals for
+                                years, and I've never been
+                                disappointed. The quality
+                                of their products is
+                                outstanding, and their
+                                customer service is
+                                exceptional."
+                            </p>
+                            <h4>Aanvi</h4>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial4_slide">
+                            <!-- <img src="img/profiles/blankdp.png" class="img-circle img-responsive" /> -->
+                            <p>
+                                "JOSHCRISPR Deals has
+                                become my go-to source
+                                for medical supplies. Their
+                                website is easy to navigate,
+                                and the ordering process is
+                                seamless. Plus, their prices
+                                are unbeatable!" </p>
+                            <h4> NHM Palakkad
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial4_slide">
+                            <!-- <img src="img/profiles/blankdp.png" class="img-circle img-responsive" /> -->
+                            <p>
+                                "As a healthcare
+                                professional, I rely on top
+                                notch medical equipment.
+                                JOSHCRISPR Deals always
+                                delivers. Their products are
+                                reliable, durable, and
+                                exceed my expectations."
+                            </p>
+                            <h4> Dr.Anas Mohammed
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#testimonial4" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#testimonial4" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- ================ testimonial section end ================= -->
+
+    <!--================ hotline == ===============-->
+
+    <div class="contact-sections p-5">
+        <div class="container">
+            <h2 class="text-center">Contact us</h2>
+            <p class="text-center pt-3">
+                If you have any questions, concerns, or feedback, we're here to help. Reach out to our friendly customer
+                support
+                team via phone or email. We strive to respond to all inquiries within 24 hours. Your satisfaction is our
+                top priority.
+            </p>
+            <div class="row mx-auto text-center mt-5">
+                <div class="col-md-4 text-start">
+                    <i class="fa-solid fa-location-dot pb-2 font-weight-bold"></i><br />
+                    <h6>Address</h6>
+                    <p class="text-start">
+                        JOSHCRISPR LLP VARIYANGATTIL BUILDING THACHAMPARA, PALAKKAD
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fa-solid fa-phone"></i><br />
+                    <h6>Phone</h6>
+                    <p>
+                        <a href="tel:9048150212" class="text-dark">9048150212,</a> <a class="text-dark"
+                            href="tel:7012898332">7012898332</a>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fa-solid fa-business-time"></i><br />
+                    <h6>support</h6>
+                    <p>We provide 24/7 customer support. Please feel free to contact us.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--================ hotline End =================-->
+
+    <!-- start footer Area -->
+    <!-- start footer Area -->
+    <hr>
+    <footer class="footer-area area-padding-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-sm-6 single-footer-widget">
+                    <h4>Top Products</h4>
+                    <ul>
+                        <li><a href="#">Delevery kit</a></li>
+                        <li><a href="#"> Angio kit</a></li>
+                        <li><a href="#"> ORTHO KIT</a></li>
+                        <li><a href="#"> Colonoscopy Kits</a></li>
+                        <li><a href="#"> Caesarean Kits</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-sm-6 single-footer-widget">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about-us.php">About Us</a></li>
+                        <li><a href="contact.php">Contact Us</a></li>
+                        <li><a href="category.php">Category</a></li>
+                        <li><a href="products.php">Products</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-sm-6 single-footer-widget">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="#">Innovative Medical Products</a></li>
+                        <li><a href="#">Customer-Centric Approach,</a></li>
+                        <li><a href="#">Exclusive Discounts</a></li>
+                        <li><a href="#">Support and Warranty</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6 single-footer-widget">
+                    <h4>Contact Us</h4>
+                    <p class="fw-bold ">You can trust us</p>
+                    <p>JOSHCRISPR LLP
+                        VARIYANGATTIL <br />BUILDING,
+                        THACHAMPARA,<br /> PALAKKAD<br />
+                        9048150212,
+                        7012898332,
+                    </p>
+                </div>
+                <div class="col-lg-2 col-sm-6 single-footer-widget mt-0 pt-0 mt-md-5 pt-md-5">
+                    <img src="./img/logo.png" alt="" width="200px">
+                </div>
+            </div>
+            <div class="row footer-bottom d-flex justify-content-between">
+                <p class="col-lg-8 col-sm-12 footer-text m-0">
+                    <!-- Link back to Colorlib can't be removed. Template is licen  sed under CC BY 3.0. -->
+                    Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved | This Website is
+                    developed with <i class="fa fa-heart" aria-hidden="true"></i> by <a
+                        href="https://www.iberrtech.com/" target="_blank"> iberrtechnologies</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+                <div class="col-lg-4 col-sm-12 footer-social">
+                    <a href="#" text-light><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-regular fa-envelope"></i></a>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer Area -->
+    <!-- End footer Area -->
+    <!-- Optional JavaScript -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script>
+
+        $(document).ready(function () {
+
+            $('#productCarousel').carousel({
+                interval: 3000 // Adjust the interval as needed (milliseconds)
+            });
+            $('#myCarousel').carousel({
+                interval: 3000,
+                autoplay: false,
+            })
+            // Additional custom jQuery if needed
+            // Example: Pause carousel on hover
+            $('#productCarousel').hover(
+                function () {
+                    $(this).carousel('pause');
+                },
+                function () {
+                    $(this).carousel('cycle');
+                }
+            );
+        });
+
+        function product() {
+            window.location.href = 'products.html'
+        }
+    </script>
+    <!-- <script src="js/jquery-2.2.4.min.js"></script> -->
+    <link rel="stylesheet" href="/js/products-details-page-main-slider.js">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/theme.js"></script>
+    <!-- Js -->
+    <script src="js/slider.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- jquery slick -->
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src='//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js'></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('.product-slider').slick({
+                slidesToShow: 5,
+                slidesToScroll: 2,
+                autoplay: false,
+                autoplaySpeed: 2000,
+                arrows: true,
+                dots: true,
+                pauseOnHover: false,
+                responsive: [{
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },
+
+                {
+                    breakpoint: 720,
+                    settings: {
+                        slidesToShow: 2,
+
+                    }
+                },
+                {
+                    breakpoint: 420,
+                    settings: {
+                        slidesToShow: 1,
+
+                    }
+                },
+
+                ]
+            });
+            $('.category-slider').slick({
+                slidesToShow: 6,
+                slidesToScroll: 2,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: false,
+                dots: false,
+                pauseOnHover: false,
+                responsive: [{
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                },
+
+                {
+                    breakpoint: 720,
+                    settings: {
+                        slidesToShow: 2,
+
+                    }
+                },
+
+                ]
+            });
+        });
+    </script>
+    <script>
+        $(function () {
+            $("#dialog").dialog();
+        });
+    </script>
+
+    <!-- Aos  -->
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+</body>
+
+</html>

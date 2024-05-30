@@ -1,0 +1,74 @@
+
+.products-page .row {
+    border-radius: 10px;
+}
+
+.products-page .products-box {
+    width: 100%;
+    max-width: 220px;
+    background-color: white;
+    height: 250px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    max-height: 600px;
+    border: 1px #dce0e8 solid;
+    border-radius: 10px;
+    transition: width 0.5s, box-shadow 0.5s;
+    position: relative;
+}
+
+.products-page .products-box img {
+    width: 150px;
+    height: 150px;
+    padding-top: 20px;
+    transition: width 0.5s, height 0.5s, padding-top 0.5s;
+}
+
+.products-page .products-box h6 {
+    text-align: start;
+    color: black;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.products-page .products-box p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    line-height: 1.5rem;
+    font-size: 13px;
+    text-align: left;
+    transition: opacity 0.5s;
+}
+
+.products-page .products-box .shop-btn {
+    display: none;
+    position: absolute;
+    bottom: 34px;
+    border-style: none;
+    background-color: rgba(9, 143, 253, 0.809);
+    color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+    margin-top: 0px;
+    transition: opacity 0.5s;
+}
+
+.products-page .products-box:hover img {
+    width: 130px;
+    height: 130px;
+    padding-top: 10px;
+}
+
+.products-page .products-box:hover p {
+    opacity: 0;
+}
+
+.products-page .products-box:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.products-page .products-box:hover .shop-btn {
+    display: block;
+    opacity: 1;
+}   

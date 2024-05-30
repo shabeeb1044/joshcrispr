@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*CAROUSEL*/
+        .content-width {
+            width: 100%;
+            height: 70vh;
+            margin: 0 auto;
+            margin-top: 10%;
+        }
+
+        .slideshow {
+            position: relative;
+            width: 100%;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .slideshow-items {
+            position: relative;
+            width: 100%;
+            height: 70vh;
+        }
+
+        .item {
+            position: absolute;
+            width: 100%;
+            height: auto;
+        }
+
+        .item-image-container {
+            position: relative;
+            width: 100%;
+            height: 70vh;
+        }
+
+        .item-image-container::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 0;
+            width: 101%;
+            height: 90vh;
+            background: #22222A;
+            opacity: 0;
+
+        }
+
+        .item-image {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            display: block;
+            /* transition: property name | duration | timing-function | delay  */
+            transition: opacity .3s ease-out .45s;
+        }
+
+        .item.active .item-image {
+            opacity: 1;
+        }
+
+        .item.active .item-image-container::before {
+            opacity: .0;
+        }
+
+        .item-description {
+            position: absolute;
+            top: 50vh;
+            left: 1.8%;
+            width: 50%;
+            color: #000;
+            padding-right: 4%;
+            line-height: 1.8;
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        /* Staggered Vertical Items ------------------------------------------------------*/
+        .item-header {
+            position: absolute;
+            top: 40vh;
+            left: 1.8%;
+        }
+
+        .item-header .vertical-part {
+            margin: 0 -4px;
+            -webkit-font-smoothing: auto;
+            font-size: 2vw;
+            color: #000;
+            font-family: 'Yusei Magic', sans-serif;
+        }
+
+        .desc b {
+            font-family: 'Titillium Web', sans-serif;
+        }
+
+        @media (max-width:600px) {
+            .item-header .vertical-part {
+                font-size: 3vw;
+            }
+
+            .content-width {
+                height: 50vh;
+            }
+
+            .slideshow {
+                position: relative;
+                width: 100%;
+                min-height: 50vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+
+            .slideshow-items {
+                min-height: 60vh;
+            }
+
+            .item-image-container {
+                height: 60vh;
+            }
+
+            .item-image-container::before {
+                height: 60vh;
+            }
+
+            .item-description {
+                position: absolute;
+                top: 40vh;
+                width: 90%;
+                font-size: 14px;
+            }
+
+            .item-header {
+                position: absolute;
+                top: 30vh;
+            }
+        }
+
+        .vertical-part {
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .vertical-part b {
+            display: inline-block;
+            transform: translateY(100%);
+        }
+
+        .item-header .vertical-part b {
+            transition: .5s;
+        }
+
+        .item-description .vertical-part b {
+            transition: .21s;
+        }
+
+        .item.active .item-header .vertical-part b {
+            transform: translateY(0);
+        }
+
+        .item.active .item-description .vertical-part b {
+            transform: translateY(0);
+        }
+
+        /* Controls ----------------------------------------------------------------------*/
+        .controls {
+            position: relative;
+            text-align: right;
+            display: block;
+        }
+
+        .controls ul {
+            list-style: none;
+            float: left;
+        }
+
+        .controls ul li {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 3px;
+            background: #bdbdd5;
+            ;
+            cursor: pointer;
+        }
+
+        .controls ul li.active {
+            background: #6a6a77;
+            ;
+        }
+
+
+        @media (max-width:600px) {
+            .content-width {
+                margin-top: 15%;
+            }
+
+            .controls ul {
+                list-style: none;
+                position: absolute;
+                top: -20vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+    <div>
+        <div class="slideshow">
+            <!-- Slideshow Items -->
+            <div class="slideshow-items">
+                <div class="item">
+                    <div class="item-image-container">
+                        <img class="item-image" src="https://i.ibb.co/d7Rn88d/slide1.jpg" />
+                    </div>
+                    <!-- Staggered Header Elements -->
+                    <div class="item-header">
+                        <span class="vertical-part"><b>Striking Deals On <em>Men's FootWare</em></em></b></span>
+                    </div>
+                    <!-- Staggered Description Elements -->
+                    <div class="item-description">
+                        <span class="vertical-part desc">
+                            <b>Offers you cannot miss! upto 80% off</b>
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-image-container">
+                        <img class="item-image" src="https://i.ibb.co/fQrPPpR/slide2.jpg" />
+                    </div>
+                    <!-- Staggered Header Elements -->
+                    <div class="item-header">
+                        <span class="vertical-part"><b>Top Deals On <em>Cook Ware</em></b></span>
+                    </div>
+                    <!-- Staggered Description Elements -->
+                    <div class="item-description">
+                        <span class="vertical-part desc">
+                            <b>Upto 10% off on cart value more than <i class="fa fa-rupee"></i>5000</b>
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-image-container">
+                        <img class="item-image" src="https://i.ibb.co/GJ9C3kV/slide3.jpg" />
+                    </div>
+                    <!-- Staggered Header Elements -->
+                    <div class="item-header">
+                        <span class="vertical-part" style="color:#fff;"><b>ShopNow On <em>INFERNO</em></b></span>
+                    </div>
+                    <!-- Staggered Description Elements -->
+                    <div class="item-description">
+                        <span class="vertical-part desc" style="color:#fff;">
+                            <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="controls">
+                <ul>
+                    <li class="control" data-index="0"></li>
+                    <li class="control" data-index="1"></li>
+                    <li class="control" data-index="2"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('id01').style.display = 'block';
+
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("myAdds");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 4000); // Change image every 2 seconds
+        }
+
+        var modal = document.getElementById('id01');
+        document.addEventListener("keydown", ({ key }) => {
+            if (key === "Escape") {
+                if (modal.style.display = "block") {
+                    modal.style.display = "none";
+                }
+            }
+        });
+
+
+
+
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+
+
+        const items = document.querySelectorAll('.item'),
+            controls = document.querySelectorAll('.control'),
+            headerItems = document.querySelectorAll('.item-header'),
+            descriptionItems = document.querySelectorAll('.item-description'),
+            activeDelay = .76,
+            interval = 5000;
+
+        let current = 0;
+
+        const slider = {
+            init: () => {
+                controls.forEach(control => control.addEventListener('click', e => { slider.clickedControl(e); }));
+                controls[current].classList.add('active');
+                items[current].classList.add('active');
+            },
+            nextSlide: () => {// Increment current slide and add active class
+                slider.reset();
+                if (current === items.length - 1) current = -1; // Check if current slide is last in array
+                current++;
+                controls[current].classList.add('active');
+                items[current].classList.add('active');
+                slider.transitionDelay(headerItems);
+                slider.transitionDelay(descriptionItems);
+            },
+            clickedControl: e => {// Add active class to clicked control and corresponding slide
+                slider.reset();
+                clearInterval(intervalF);
+
+                const control = e.target,
+                    dataIndex = Number(control.dataset.index);
+
+                control.classList.add('active');
+                items.forEach((item, index) => {
+                    if (index === dataIndex) {// Add active class to corresponding slide
+                        item.classList.add('active');
+                    }
+                });
+                current = dataIndex; // Update current slide
+                slider.transitionDelay(headerItems);
+                slider.transitionDelay(descriptionItems);
+                intervalF = setInterval(slider.nextSlide, interval); // Fire that bad boi back up
+            },
+            reset: () => {// Remove active classes
+                items.forEach(item => item.classList.remove('active'));
+                controls.forEach(control => control.classList.remove('active'));
+            },
+            transitionDelay: items => {// Set incrementing css transition-delay for .item-header & .item-description, .vertical-part, b elements
+                let seconds;
+
+                items.forEach(item => {
+                    const children = item.childNodes; // .vertical-part(s)
+                    let count = 1,
+                        delay;
+
+                    item.classList.value === 'item-header' ? seconds = .015 : seconds = .007;
+
+                    children.forEach(child => {// iterate through .vertical-part(s) and style b element
+                        if (child.classList) {
+                            item.parentNode.classList.contains('active') ? delay = count * seconds + activeDelay : delay = count * seconds;
+                            child.firstElementChild.style.transitionDelay = `${delay}s`; // b element
+                            count++;
+                        }
+                    });
+                });
+            }
+        };
+
+
+        let intervalF = setInterval(slider.nextSlide, interval);
+        slider.init();
+        // Set the date we're counting down to
+        var countDownDate = new Date("Jan 5, 2023 15:37:25").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("timer").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+
+    </script>
+</body>
+
+</html>
